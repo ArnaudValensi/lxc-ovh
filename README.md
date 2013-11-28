@@ -52,3 +52,8 @@ The file should look like this :
        bridge_fd 0
        bridge_maxwait 5
 ```
+
+### References
+
+I followed this tutorial (2.4.3.1. Mode NATé):
+[http://www.delloye.org/linux/lxc.html]
