@@ -1,12 +1,20 @@
 lxc-ovh
 =======
 
-VM creation
---------------
+Debian vm configuration
+-----------------------
+
+### Template file
+
+Copy the following file in the template folder of lxc:
+```
+https://raw.github.com/ArnaudValensi/lxc-ovh/master/files/templates/lxc-debian-custom
+```
+
+### VM creation
    lxc-create -n name -t debian-custom
 
-Host configuration
---------------
+### Host configuration
 
 Add this :
 ```
