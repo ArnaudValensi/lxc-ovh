@@ -19,7 +19,7 @@ https://raw.github.com/ArnaudValensi/lxc-ovh/master/files/templates/lxc-debian-c
 Add this :
 ```
        post-up echo 1 > /proc/sys/net/ipv4/ip_forward
-       iptables -t nat -A POSTROUTING -s 192.168.10.0/24 -o eth0 -j MASQUERADE
+       post-up iptables -t nat -A POSTROUTING -s 192.168.10.0/24 -o eth0 -j MASQUERADE
 
    auto br0
    iface br0 inet static
@@ -41,7 +41,7 @@ The file should look like this :
        broadcast 91.123.123.255
        gateway 91.123.123.254
        post-up echo 1 > /proc/sys/net/ipv4/ip_forward
-       iptables -t nat -A POSTROUTING -s 192.168.10.0/24 -o eth0 -j MASQUERADE
+       post-up iptables -t nat -A POSTROUTING -s 192.168.10.0/24 -o eth0 -j MASQUERADE
 
    auto br0
    iface br0 inet static
