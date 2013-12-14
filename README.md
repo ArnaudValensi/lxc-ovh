@@ -52,3 +52,21 @@ The file should look like this :
        bridge_fd 0
        bridge_maxwait 5
 ```
+
+### Autostart VMs
+
+Copy the following file in `/etc/init.d/`:
+```
+https://raw.github.com/ArnaudValensi/lxc-ovh/master/files/init.d/lxc
+```
+
+Then:
+```
+$ chmod +x /etc/init.d/lxc
+$ update-rc.d lxc defaults
+```
+
+Now to autostart a vm you can add `1` in a file named `autostart` in the vm folder:
+```
+echo "1" > /path/to/lxc/myvm/autostart
+```
